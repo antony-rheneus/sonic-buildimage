@@ -93,5 +93,17 @@
     "PORTCHANNEL_INTERFACE_INVALID_MAC_ADDR": {
         "desc": "Set invalid interface mac address.",
         "eStrKey": "Pattern"
+    },
+    "PORT_CHANNEL_INVALID_WEIGHTED_LAG": {
+        "desc": "INCORRECT PORTCHANNEL WEIGHTED_LAG IN PORT_CHANNEL TABLE.",
+        "eStrKey" : "Pattern",
+        "eStr": ["false|true|False|True"]
+    },
+    "PORTCHANNEL_INTERFACE_WRONG_LAG_WEIGHT_RANGE": {
+        "desc": "Configure wrong value for lag weight.",
+        "eStr" : "Invalid LAG Weight for the portchannel member."
+    },
+    "PORTCHANNEL_INTERFACE_VALID_LAG_WEIGHT_RANGE": {
+        "desc": "Configure valid value for lag weight."
     }
 }

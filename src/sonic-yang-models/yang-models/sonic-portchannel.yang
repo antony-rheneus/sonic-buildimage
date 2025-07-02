@@ -120,6 +120,11 @@ module sonic-portchannel {
                     type stypes:boolean_type;
                 }
 
+                leaf weighted_lag {
+                    description "Enable Weighted LAG feature";
+                    type stypes:boolean_type;
+                }
+
             } /* end of list PORTCHANNEL_LIST */
 
         } /* end of container PORTCHANNEL */
@@ -144,6 +149,17 @@ module sonic-portchannel {
                         path /port:sonic-port/port:PORT/port:PORT_LIST/port:name;
                     }
                 }
+
+		leaf lag_weight {
+		    description "LAG Weight of the portchannel member";
+		    type uint32 {
+		        range "0..256" {
+			    error-message "Invalid LAG Weight for the portchannel member.";
+			    error-app-tag lag-weight-invalid;
+			}
+		    }
+		    default "0";
+		}
             } /* end of list PORTCHANNEL_MEMBER_LIST */
 
         } /* end of container PORTCHANNEL_MEMBER */

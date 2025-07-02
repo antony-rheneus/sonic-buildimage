@@ -2159,6 +2159,16 @@ name as object key and member list as attribute.
         "mtu": "9100",
         "fallback": "false",
         "fast_rate": "true"
+    },
+    "PortChannel0005": {
+        "admin_status": "up",
+        "min_links": "1",
+        "members": [
+            "Ethernet48"
+        ],
+        "mtu": "9100",
+        "fallback": "false",
+        "weighted_lag": "true"
     }
   }
 }
@@ -2173,7 +2183,8 @@ name as object key and member list as attribute.
     "PortChannel0001|Ethernet50": {},
     "PortChannel0002|Ethernet52": {},
     "PortChannel0003|Ethernet54": {},
-    "PortChannel0004|Ethernet56": {}
+    "PortChannel0004|Ethernet56": {},
+    "PortChannel0003|Ethernet48": {"lag_weight": "100"}
   }
 }
 

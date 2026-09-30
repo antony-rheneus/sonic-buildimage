@@ -106,6 +106,15 @@ module sonic-feature{
                     default "false";
                 }
 
+                leaf criticality {
+                    description "Criticality tier used by the active power plan to cap container CPU";
+                    type enumeration {
+                        enum critical;
+                        enum important;
+                        enum optional;
+                    }
+                }
+
                 leaf support_syslog_rate_limit {
                     description "When true, this feature supports per-service syslog rate limiting.";
                     type stypes:boolean_type;

@@ -401,6 +401,23 @@ module sonic-device_metadata {
                     }
                     default disable;
                 }
+
+                leaf power_plan {
+                    type string {
+                        length 1..64;
+                    }
+                    description "Current power plan profile selected for the device.";
+                }
+
+                leaf sai_sync_response_timeout_ms {
+                    type uint32;
+                    description "SAI Redis sync response timeout in milliseconds for runtime operation.";
+                }
+
+                leaf sai_sync_response_timeout_startup_ms {
+                    type uint32;
+                    description "SAI Redis sync response timeout in milliseconds during system startup.";
+                }
             }
             /* end of container localhost */
 

@@ -2715,6 +2715,16 @@
             }
         },
 
+        "POWER_PLAN_PROFILE": {
+            "low-power": {
+                "asic_engines_disabled": "l3_vxlan,acl_deep_lookup",
+                "polling_interval_multiplier": "4.0",
+                "cpu_cap_critical_pct": "100",
+                "cpu_cap_important_pct": "60",
+                "cpu_cap_optional_pct": "20"
+            }
+        },
+
         "POLICER": {
             "everflow_static_policer": {
                 "meter_type": "bytes",

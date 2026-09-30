@@ -129,5 +129,41 @@
                 ]
             }
         }
+    },
+    "FEATURE_WITH_VALID_CRITICALITY": {
+        "sonic-feature:sonic-feature": {
+            "sonic-feature:FEATURE": {
+                "FEATURE_LIST": [
+                    {
+                        "name": "swss",
+                        "state": "enabled",
+                        "criticality": "critical"
+                    },
+                    {
+                        "name": "lldp",
+                        "state": "enabled",
+                        "criticality": "important"
+                    },
+                    {
+                        "name": "snmp",
+                        "state": "enabled",
+                        "criticality": "optional"
+                    }
+                ]
+            }
+        }
+    },
+    "FEATURE_WITH_INVALID_CRITICALITY": {
+        "sonic-feature:sonic-feature": {
+            "sonic-feature:FEATURE": {
+                "FEATURE_LIST": [
+                    {
+                        "name": "snmp",
+                        "state": "enabled",
+                        "criticality": "low"
+                    }
+                ]
+            }
+        }
     }
 }
